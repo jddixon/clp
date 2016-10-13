@@ -1,2 +1,11 @@
 py/clp/CHANGES
 
+v0.0.2
+    2016-10-13
+        * add pylint, coverage; add long_description to setup.py
+v0.0.1  
+    2016-10-12
+        * initial commit 
+
+
+

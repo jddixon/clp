@@ -1,3 +1,4 @@
-<h1 class="libTop">clp</h1>
+clp
+===
 
 A Computer Language Processing (clp) library implemented in Python3.
