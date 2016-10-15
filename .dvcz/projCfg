@@ -2,13 +2,14 @@
 project:clp
 package:clp
 mainlang:py
-version:0.0.1
-versionDate:2016-10-12
+version:0.0.2
+versionDate:2016-10-13
 :?dirs?:
 dir:std:ghpDoc
 dir:std:dist
 dir:std:.dvcz
 dir:pkg:clp
+dir:local:test_files
 dir:clr:build
 :?files?:
 code:std:.dvcz/projCfg
@@ -28,6 +29,7 @@ code:std:MANIFEST.in
 txt:std:LICENSE-MIT.md
 txt:std:CHANGES
 txt:std:README.md
+txt:std:README.rst
 txt:std:TODO
 txt:local:name_pair_test_data.txt
 bash:std:bkp2U
@@ -38,5 +40,6 @@ bash:std:test.all
 bash:std:doPyLint
 bash:std:checkCoverage
 py:std:setup.py
+py:test:test_file_a.py
 py:test:test_name_pair_reader.py
-dunno:local:.coverage
+py:test:test_util.py

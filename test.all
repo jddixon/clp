@@ -4,7 +4,9 @@ if [ ! -z "${DEV_BASE// }" ]
 then
   cd $DEV_BASE/py/clp
   
+  ./test_file_a.py
   ./test_name_pair_reader.py
+  ./test_util.py
   
 else
   echo "DEV_BASE is not defined"
