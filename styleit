@@ -5,6 +5,7 @@ then
   cd $DEV_BASE/py/clp
   
   autopep8 -ai -r clp *.py
+  echo "not styling test_files/ subdir"
   
 else
   echo "DEV_BASE is not defined"

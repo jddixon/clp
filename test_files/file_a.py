@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# ~/dev/py/clp/setup.py
+# test_files/infile_a.py
 
 import re
 from distutils.core import setup
