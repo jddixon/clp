@@ -1,7 +1,8 @@
 # clp/clp/py.py
 
-import os
 import hashlib
+import os
+import re
 from tokenize import tokenize, untokenize, NAME, STRING
 from io import BytesIO
 
@@ -9,6 +10,37 @@ import sha3         # monkey-patches hashlib
 from clp import CLPError
 
 from xlattice import check_using_sha, Q
+
+PY_NAME_PAT = r'^[a-zA-Z_][a-zA-Z_0-9]*$'
+PY_NAME_RE = re.compile(PY_NAME_PAT)
+
+
+def check_name(name):
+    if not name:
+        raise CLPError("expected Python name, got an empty string")
+    m = PY_NAME_RE.match(name)
+    if not m:
+        raise CLPError("'%s' is not a valid Python name" % name)
+
+
+def check_string(tokval, name_pairs):
+    """
+    Where a string is a quoted variable name and the variable name
+    is in the old-name/new-name map, do the replacement.
+
+    The quote character must either SQUOTE or DQUOTE.  If the comparison
+    fails, return the value that was tested.
+    """
+    if len(tokval) > 2:
+        qchar = tokval[0]
+        if qchar in ['"', "'"]:
+            end_char = tokval[-1]
+            if qchar == end_char:
+                text = tokval[1:-1]
+                if text in name_pairs:
+                    tokval = qchar + name_pairs[text] + qchar
+
+    return tokval
 
 
 def get_name_pairs(in_stream):
@@ -49,26 +81,6 @@ def get_name_pairs(in_stream):
     if not pairs:
         raise CLPError("empty name-pairs file")
     return pairs
-
-
-def check_string(tokval, name_pairs):
-    """
-    Where a string is a quoted variable name and the variable name
-    is in the old-name/new-name map, do the replacement.
-
-    The quote character must either SQUOTE or DQUOTE.  If the comparison
-    fails, return the value that was tested.
-    """
-    if len(tokval) > 2:
-        qchar = tokval[0]
-        if qchar in ['"', "'"]:
-            end_char = tokval[-1]
-            if qchar == end_char:
-                text = tokval[1:-1]
-                if text in name_pairs:
-                    tokval = qchar + name_pairs[text] + qchar
-
-    return tokval
 
 
 def rename_in_file(path_to_file, name_pairs, using_sha, path_to_output=''):
