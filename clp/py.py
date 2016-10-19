@@ -64,13 +64,15 @@ def get_name_pairs(in_stream):
         if line:
             line = line.strip()
             if line:
-                if not '\t' in line:
+                if not ' ' in line:
                     raise CLPError("ill-formed line: '%s'" % line)
-                left, right = line.split('\t', maxsplit=1)
+                left, right = line.split(' ', maxsplit=1)
                 left = left.rstrip()
                 right = right.lstrip()
-                # XXX could check for pathelogical cases ...
                 if left and right:
+                    # verify both names are good
+                    check_name(left)            # possible CLPError
+                    check_name(right)           # possible CLPError
                     if left in pairs:
                         raise CLPError("duplicate left value: %s" % left)
                     pairs[left] = right
