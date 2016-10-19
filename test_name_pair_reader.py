@@ -12,15 +12,15 @@ from clp.py import get_name_pairs, CLPError
 # -- bad input ------------------------------------------------------
 
 NO_TAB_INPUT = """
-hello\tthere
-explosion_here  # no tab in this line
+hello there
+explosion_here  # no space in this line
 """
 
 # -- more bad input -------------------------------------------------
 DUPE_LEFT_VALUE_INPUT = """
-abc\\tdef        # this gets overridden
-ghi\tjkl
-abc\tmno
+abc def         # this gets overridden
+ghi jkl
+abc mno
 """
 
 # -- good input -----------------------------------------------------
@@ -29,12 +29,12 @@ TEST_DATA = """# silly comment at top of file
 
 
 # comment at start of line
-\t\t\t\t\t\t\t\t# comment over here
+        # comment over here
 
-  abc\t   def\t\t\t\t # two tabs there
-ghi\tjkl\t\t\t\t\t\t # single tab
-foo\t\t bar
-baz\t\t that_sort-of-thing\t\t  # tabs on right side
+  abc    def                # two spaces there
+ghi jkl                     # single space
+foo   bar
+baz   that_sort_of_thing    # spaces on right side
 """
 # -- end good input -------------------------------------------------
 
@@ -77,7 +77,7 @@ class TestNamePairReader(unittest.TestCase):
         self.assertTrue('ghi' in pairs)
 
         self.assertEqual(pairs['abc'], 'def')
-        self.assertEqual(pairs['baz'], 'that_sort-of-thing')
+        self.assertEqual(pairs['baz'], 'that_sort_of_thing')
         self.assertEqual(pairs['foo'], 'bar')
         self.assertEqual(pairs['ghi'], 'jkl')
 

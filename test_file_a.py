@@ -10,15 +10,15 @@ from clp.py import get_name_pairs, rename_in_file, CLPError
 from xlattice import Q
 
 FROM_NAME_PAIRS = """# used to go from original to checkpoint
-clp\tnewCLP         # new program name (appears three times in strings)
-description\tdesc
-file\tfoo           # appears twice as variable, three times in comments
+clp newCLP         # new program name (appears three times in strings)
+description desc
+file foo           # appears twice as variable, three times in comments
 """
 
 BACK_NAME_PAIRS = """# from checkpoint back to original
-newCLP\tclp
-desc\tdescription
-foo\tfile
+newCLP clp
+desc description
+foo file
 """
 
 INPUT_FILE = os.path.join('test_files', 'file_a.py')
