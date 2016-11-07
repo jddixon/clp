@@ -11,7 +11,7 @@ from clp.py import get_name_pairs, CLPError
 
 # -- bad input ------------------------------------------------------
 
-NO_TAB_INPUT = """
+NO_DELIMITER_INPUT = """
 hello there
 explosion_here  # no space in this line
 """
@@ -40,6 +40,7 @@ baz   that_sort_of_thing    # spaces on right side
 
 
 class TestNamePairReader(unittest.TestCase):
+    """ Confirm that a readable name-pair list behaves as expected. """
 
     def setUp(self):
         pass
@@ -48,24 +49,28 @@ class TestNamePairReader(unittest.TestCase):
         pass
 
     def test_empty_in_stream(self):
+        """ Verify that an empty input stream raises an exception. """
         in_stream = io.StringIO('')
         try:
-            pairs = get_name_pairs(in_stream)
+            _ = get_name_pairs(in_stream)
             self.fail("didn't raise on empty input")
         except CLPError as err:
             pass
 
     def test_ill_formed_input(self):
-        in_stream = io.StringIO(NO_TAB_INPUT)
+        """ Verify that an input line without a delimiter raises an exception. """
+        in_stream = io.StringIO(NO_DELIMITER_INPUT)
         with self.assertRaises(CLPError):
             pairs = get_name_pairs(in_stream)
 
     def test_dupe_left_input(self):
+        """ Verify that input with duplicate keys raises. """
         in_stream = io.StringIO(DUPE_LEFT_VALUE_INPUT)
         with self.assertRaises(CLPError):
             pairs = get_name_pairs(in_stream)
 
     def test_name_pair_reader(self):
+        """ Verify that good input produces the expected list of pairs. """
 
         in_stream = io.StringIO(TEST_DATA)
         pairs = get_name_pairs(in_stream)

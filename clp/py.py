@@ -1,25 +1,31 @@
 # clp/clp/py.py
 
+""" Functions and utilities for computer language processing."""
+
 import hashlib
 import os
 import re
+import sys
 from tokenize import tokenize, untokenize, NAME, STRING
 from io import BytesIO
 
-import sha3         # monkey-patches hashlib
 from clp import CLPError
-
 from xlattice import check_using_sha, Q
+
+if sys.version_info < (3, 6):
+    import sha3         # monkey-patches hashlib
 
 PY_NAME_PAT = r'^[a-zA-Z_][a-zA-Z_0-9]*$'
 PY_NAME_RE = re.compile(PY_NAME_PAT)
 
 
 def check_name(name):
+    """ Verify that a string is an acceptable Python variable name. """
+
     if not name:
         raise CLPError("expected Python name, got an empty string")
-    m = PY_NAME_RE.match(name)
-    if not m:
+    match = PY_NAME_RE.match(name)
+    if not match:
         raise CLPError("'%s' is not a valid Python name" % name)
 
 
@@ -108,7 +114,10 @@ def rename_in_file(path_to_file, name_pairs, using_sha, path_to_output=''):
     counts = {}
 
     def hash_it(data, using_sha):
+        """ Hash a block of data using the specified type of SHA. """
+
         sha = None
+        # pylint: disable=redefined-variable-type
         if using_sha == Q.USING_SHA1:
             sha = hashlib.sha1()
         elif using_sha == Q.USING_SHA2:
@@ -138,8 +147,8 @@ def rename_in_file(path_to_file, name_pairs, using_sha, path_to_output=''):
     # END
 
     results = []
-    g = tokenize(BytesIO(data).readline)
-    for toknum, tokval, start, end, log_line in g:
+    tokens = tokenize(BytesIO(data).readline)
+    for toknum, tokval, start, end, log_line in tokens:
         # start and end are 2-tuples (srow, scol; erow, ecol)
         if toknum == NAME:
             if tokval in name_pairs:

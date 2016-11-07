@@ -6,7 +6,7 @@ import io
 import os
 import unittest
 
-from clp.py import get_name_pairs, rename_in_file, CLPError
+from clp.py import get_name_pairs, rename_in_file  # , CLPError
 from xlattice import Q
 
 FROM_NAME_PAIRS = """# used to go from original to checkpoint
@@ -58,7 +58,7 @@ class TestFileA(unittest.TestCase):
         os.makedirs('tmp', exist_ok=True)
         self.assertTrue(os.path.exists(INPUT_FILE))
 
-        data_out, counts, old_hash, new_hash = rename_in_file(
+        _, counts, old_hash, new_hash = rename_in_file(
             INPUT_FILE, from_pairs, Q.USING_SHA1, OUTPUT_FILE)
 
         self.assertTrue('clp' in counts)
@@ -74,7 +74,7 @@ class TestFileA(unittest.TestCase):
 
     def do_back_to_file_a(self):
         """
-        Create a set of name pairs, verify that they have expected values.
+        Given a set of name pairs, verify a file is transformed as expected.
         """
         in_stream = io.StringIO(BACK_NAME_PAIRS)
         back_pairs = get_name_pairs(in_stream)
@@ -91,7 +91,7 @@ class TestFileA(unittest.TestCase):
         # read in a program fragment, replace named variables
         self.assertTrue(os.path.exists(OUTPUT_FILE))
 
-        data_out, counts, old_hash, new_hash = rename_in_file(
+        _, counts, old_hash, new_hash = rename_in_file(
             OUTPUT_FILE, back_pairs, Q.USING_SHA1, ROUNDTRIPPED)
 
         self.assertTrue('newCLP' in counts)
@@ -106,6 +106,8 @@ class TestFileA(unittest.TestCase):
         return old_hash, new_hash
 
     def test_file_a(self):
+        """ Test creating and then applying a set of name-pairs. """
+
         orig_hash, out_hash = self.do_from_file_a()
         out_hash2, rt_hash = self.do_back_to_file_a()
         self.assertEqual(out_hash2, out_hash)       # should be trivial
