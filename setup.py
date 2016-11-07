@@ -10,7 +10,7 @@ __version__ = re.search(r"__version__\s*=\s*'(.*)'",
 # see http://docs.python.org/distutils/setupscript.html
 
 with open('README.rst', 'r') as file:
-    long_description = file.read()
+    LONG_DESC = file.read()
 
 setup(name='clp',
       version=__version__,
@@ -28,7 +28,7 @@ setup(name='clp',
       scripts=[],
       #
       description='clp: utilities for Computer Language Processing',
-      long_description=long_description,
+      long_description=LONG_DESC,
       url='https://jddixon.github.io/clp',
       classifiers=[
           'Development Status :: 2 - Pre-Alpha',
