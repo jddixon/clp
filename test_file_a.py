@@ -7,7 +7,7 @@ import os
 import unittest
 
 from clp.py import get_name_pairs, rename_in_file  # , CLPError
-from xlattice import Q
+from xlattice import HashTypes
 
 FROM_NAME_PAIRS = """# used to go from original to checkpoint
 clp newCLP         # new program name (appears three times in strings)
@@ -59,7 +59,7 @@ class TestFileA(unittest.TestCase):
         self.assertTrue(os.path.exists(INPUT_FILE))
 
         _, counts, old_hash, new_hash = rename_in_file(
-            INPUT_FILE, from_pairs, Q.USING_SHA1, OUTPUT_FILE)
+            INPUT_FILE, from_pairs, HashTypes.SHA1, OUTPUT_FILE)
 
         self.assertTrue('clp' in counts)
         self.assertEqual(counts['clp'], 2)
@@ -92,7 +92,7 @@ class TestFileA(unittest.TestCase):
         self.assertTrue(os.path.exists(OUTPUT_FILE))
 
         _, counts, old_hash, new_hash = rename_in_file(
-            OUTPUT_FILE, back_pairs, Q.USING_SHA1, ROUNDTRIPPED)
+            OUTPUT_FILE, back_pairs, HashTypes.SHA1, ROUNDTRIPPED)
 
         self.assertTrue('newCLP' in counts)
         self.assertEqual(counts['newCLP'], 2)
