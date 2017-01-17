@@ -10,7 +10,7 @@ from tokenize import tokenize, untokenize, NAME, STRING
 from io import BytesIO
 
 from clp import CLPError
-from xlattice import check_using_sha, Q
+from xlattice import check_hashtype, HashTypes
 
 if sys.version_info < (3, 6):
     import sha3         # monkey-patches hashlib
@@ -91,7 +91,7 @@ def get_name_pairs(in_stream):
     return pairs
 
 
-def rename_in_file(path_to_file, name_pairs, using_sha, path_to_output=''):
+def rename_in_file(path_to_file, name_pairs, hashtype, path_to_output=''):
     """
     Given a set of old-name/new-name pairs, edit a file to replace all
     Python names accordingly.
@@ -113,16 +113,16 @@ def rename_in_file(path_to_file, name_pairs, using_sha, path_to_output=''):
     new_hash = None
     counts = {}
 
-    def hash_it(data, using_sha):
+    def hash_it(data, hashtype):
         """ Hash a block of data using the specified type of SHA. """
 
         sha = None
         # pylint: disable=redefined-variable-type
-        if using_sha == Q.USING_SHA1:
+        if hashtype == HashTypes.SHA1:
             sha = hashlib.sha1()
-        elif using_sha == Q.USING_SHA2:
+        elif hashtype == HashTypes.SHA2:
             sha = hashlib.sha256()
-        elif using_sha == Q.USING_SHA3:
+        elif hashtype == HashTypes.SHA3:
             sha = hashlib.sha3_256()
         sha.update(data)
         return sha.hexdigest()
@@ -130,7 +130,7 @@ def rename_in_file(path_to_file, name_pairs, using_sha, path_to_output=''):
     if not os.path.exists(path_to_file):
         raise CLPError("%s does not exist" % path_to_file)
     else:
-        check_using_sha(using_sha)      # may raise exception
+        check_hashtype(hashtype)      # may raise exception
 
     # XXX CHECK: name_pairs must be a str->str map
 
@@ -139,7 +139,7 @@ def rename_in_file(path_to_file, name_pairs, using_sha, path_to_output=''):
     with open(path_to_file, 'rb') as file:
         data = file.read()
 
-    old_hash = hash_it(data, using_sha)
+    old_hash = hash_it(data, hashtype)
 
     # DEBUG
     print("pathToFile: %s" % path_to_file)
@@ -171,7 +171,7 @@ def rename_in_file(path_to_file, name_pairs, using_sha, path_to_output=''):
         results.append((toknum, tokval, start, end, log_line))
 
     data_out = untokenize(results)
-    new_hash = hash_it(data_out, using_sha)
+    new_hash = hash_it(data_out, hashtype)
     with open(path_to_output, 'wb+') as file:
         file.write(data_out)
 

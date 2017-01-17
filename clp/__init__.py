@@ -1,7 +1,7 @@
 # clp/cp/__init__.py
 
-__version__ = '0.1.4'
-__version_date__ = '2016-11-06'
+__version__ = '0.1.5'
+__version_date__ = '2017-01-17'
 
 
 class CLPError(RuntimeError):
