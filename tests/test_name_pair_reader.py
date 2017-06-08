@@ -86,5 +86,6 @@ class TestNamePairReader(unittest.TestCase):
         self.assertEqual(pairs['foo'], 'bar')
         self.assertEqual(pairs['ghi'], 'jkl')
 
+
 if __name__ == '__main__':
     unittest.main()

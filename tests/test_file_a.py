@@ -113,5 +113,6 @@ class TestFileA(unittest.TestCase):
         self.assertEqual(out_hash2, out_hash)       # should be trivial
         self.assertEqual(orig_hash, rt_hash)        # roundtrip is OK
 
+
 if __name__ == '__main__':
     unittest.main()
