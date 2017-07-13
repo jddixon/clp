@@ -21,7 +21,7 @@ desc description
 foo file
 """
 
-INPUT_FILE = os.path.join('test_files', 'file_a.py')
+INPUT_FILE = os.path.join('tests', 'test_files', 'file_a.py')
 OUTPUT_FILE = os.path.join('tmp', 'file_a_output.py')
 ROUNDTRIPPED = os.path.join('tmp', 'file_a_roundtripped.py')
 
@@ -112,6 +112,7 @@ class TestFileA(unittest.TestCase):
         out_hash2, rt_hash = self.do_back_to_file_a()
         self.assertEqual(out_hash2, out_hash)       # should be trivial
         self.assertEqual(orig_hash, rt_hash)        # roundtrip is OK
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -2,14 +2,17 @@
 project:clp
 package:clp
 mainlang:py
-version:0.0.2
-versionDate:2016-10-13
+version:0.1.6
+versionDate:2017-06-08
 :?dirs?:
 dir:std:ghpDoc
 dir:std:dist
+dir:std:src
+dir:std:tests
 dir:std:.dvcz
 dir:pkg:clp
 dir:local:test_files
+dir:local:.cache
 dir:clr:build
 :?files?:
 code:std:.dvcz/projCfg
@@ -40,6 +43,3 @@ bash:std:test.all
 bash:std:doPyLint
 bash:std:checkCoverage
 py:std:setup.py
-py:test:test_file_a.py
-py:test:test_name_pair_reader.py
-py:test:test_util.py

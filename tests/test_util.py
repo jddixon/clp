@@ -41,5 +41,6 @@ class TestUtils(unittest.TestCase):
         self.assertEqual(check_string('"foo"', name_pairs), '"bar"')
         self.assertEqual(check_string('r"foo"', name_pairs), 'r"foo"')
 
+
 if __name__ == '__main__':
     unittest.main()

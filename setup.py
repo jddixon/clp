@@ -1,39 +1,46 @@
 #!/usr/bin/python3
+# clp/setup.py
 
-# ~/dev/py/clp/setup.py
+""" Setuptools project configuration for clp. """
 
 import re
-from distutils.core import setup
+from glob import glob
+from os.path import basename, dirname, exists, join, splitext
+from setuptools import find_packages, setup
+
+# replace with literal
 __version__ = re.search(r"__version__\s*=\s*'(.*)'",
-                        open('clp/__init__.py').read()).group(1)
+                        open('src/clp/__init__.py').read()).group(1)
 
-# see http://docs.python.org/distutils/setupscript.html
+# see
+# setuptools.readthedocs.io/en/latest/setuptools.html#new-and-changed-setup-keywords
 
-with open('README.rst', 'r') as file:
-    LONG_DESC = file.read()
+long_desc = None
+if exists('README.md'):
+    with open('README.md', 'r') as file:
+        long_desc = file.read()
 
-setup(name='clp',
+setup(name='clp',                     # NOT THE SAME AS PACKAGE NAME
       version=__version__,
       author='Jim Dixon',
       author_email='jddixon@gmail.com',
-      #
-      # wherever we have a .py file that will be imported, we
-      # list it here, without the extension but SQuoted
-      py_modules=[],
-      #
-      # a package has a subdir and an __init__.py
-      packages=['clp', ],
-      #
-      # following could be in scripts/ subdir; SQuote
+
+      long_description=long_desc,
+      # packages=find_packages('src'),
+      packages=['clp'],                                   # LITERAL
+      package_dir={'': 'src'},
+      py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
+      include_package_data=False,
+      zip_safe=False,
+
+      # following could be in scripts/ subdir
       scripts=[],
-      #
-      description='clp: utilities for Computer Language Processing',
-      long_description=LONG_DESC,
-      url='https://jddixon.github.io/clp',
+      description='default proj desc',                          # LITERAL
+      url='https://jddixon.github.com/clp',
       classifiers=[
-          'Development Status :: 2 - Pre-Alpha',
+          'Development Status :: 2 - Pre-Alpha',                # VARIES
           'Intended Audience :: Developers',
-          'License :: OSI Approved :: MIT License',
+          'License :: OSI Approved :: MIT License',             # VARIES
           'Natural Language :: English',
           'Programming Language :: Python 3',
           'Topic :: Software Development :: Libraries :: Python Modules',
