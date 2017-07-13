@@ -7,50 +7,51 @@ Giaje1YAJPNVBt3dlOA5lhBp4GpSYBskJ9UR2Zyt3lgAGK3dEwxYETLMh9VWEV8i
 k2lyCIE/V/CDb9eVDYQgYSJYrnQ/JAPST7NbcY8aI+/0l7QVBhLBpmOCvmS6ofvz
 /QIDAQAB
 -----END PUBLIC KEY-----
-clp v0.1.6
-2017-06-08 21:28:07
+clp v0.1.7
+2017-07-13 19:04:58
 # BEGIN CONTENT #
 clp
  .cache
   v
    cache
-    lastfailed c2d87f4335d2db824b97647d9a610ae60ffa2d54
+    lastfailed bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f
  .dvcz
-  builds 7b03675b36c6866699f151f2d40f4381999622ce
+  builds 7174bb9db40d0b99467e7f31232fa12b2e1c7a2c
   copyright 9ba73bf798bce641eb5082b855c6788fe7ea5833
-  lastBuildList 32bd72470a065c95ebdf3cbbdc46e698d9ff911f
+  lastBuildList 485b5c3844c2dd4904417ee968708d928cc07c5a
   license 5977a55c75bb4612004451a56b0b4c22d9d3311d
-  projCfg 37bc303ac131e6d43f86c4d4e4c49496e84ba038
+  projCfg 5ecfb007a1d1467ebec1448c985b198c0ee604a1
   projCfg.local 741c00ac0647ec79ce72365d5037a87d74359faf
-  version 03d701cdda8a6ce2a5de1b159530b622872a4e78
+  version 5c1170c656dee2188eb34678311345328b2e4bd3
  .gitignore 5185a3cb0539828e50edfc25d60c80ae291197fa
- CHANGES 1e388925e053809ba84ed099641aceb8d676e39a
- LICENSE-MIT.md e82e359e6de3e83b487ab0eda0679762159a3d9d
+ CHANGES bdee033a2fcfbb75fae9a1c50855f3245111685b
+ LICENSE-MIT.md 1aadfd51d28fc4b9e3f5929212794dd121b13e26
+ MANIFEST.in ab66c4ba9f7b7352eb828e32839a387bf990125b
  README.md acc826407074062eb9e4d0022affa644063bf88c
  README.rst 75ee896b9046d844f41ababe0385d6391db03bbe
  TODO cd12ee77c00eab127c4fabfae3065ae8ff639abf
  bkp2U 41ce8c8d9ccecc4883742e18415d00e25f5a82fa
- checkCoverage e10d53089b39a4be496d68fbe6ee1aa0e50e7efc
- countem 33f17d12bc4107d9a4f3a6792702a4e50180e938
- doPyLint ad3e6414e3576c4cd6dfa60ea255286660fd5af0
+ checkCoverage 3a3af5e5ab4d56b6f8a52688a773b7ab5913eff0
+ countem fd7d5d473ac89aab56d1d03cfa934e10b47f0835
+ doPyLint 31321ad99eb3b9ac0928a68c29a8b5b88c9472fb
  ghpDoc
   index.md 70fa81ca4b378347053464f13703cd36962bfc7b
  installit 37194bce3ea6d6ebc3e8162b6d20501234973e78
  name_pair_test_data.txt 39aceffd3c4a2c8f378097cf61b48dc2bf7e13c8
  pylintrc dd234fda24a547a9071f1e4608a3c1f3b7de9aa0
- setup.py 8dd5bb79a5cf1bdc8f2121607133611677a43d69
+ setup.py a88dc593232254179b87754e4eb29840bc8eb8d9
  src
   clp
-   __init__.py 0511214771ee7ed2050b9d84c54d5600542139a8
+   __init__.py 90af4e38ca022d66e529bcd327fff774cb0d86c9
    py.py d634ed7db6bb811046234d3528aef7a4c3b2e97b
- styleit 8c518316cb6133ce0d27029c01d3daecc841629d
- test.all d44f5a75bcc9b7fc84d9b767031d52eae65ca91a
+ styleit 9dbe1953dc53e3831f18b26994adbd95df99bb63
+ test.all 7ef9453dba342c2f64f56e789c0a9cb407845f95
  tests
-  test_file_a.py e4e5e9fcc872bfd953fb90617d014704d232bb7f
+  test_file_a.py f71f80594b548365895c49deef421580dc38e01e
   test_files
    file_a.py 8ac415134beae54066286dd20c45a5e95f40c050
   test_name_pair_reader.py 06a368d11c4c5b5f3d9e78d2aaa531ebb1f1eccf
   test_util.py f26d9a67d6d522db1bcfe9da98bbc9ec2ca5e821
 # END CONTENT #
 
-U6ocFMlD1QxbA08z5oPVMJO4BI2Af09eblYpgxcPjg0mZrXeP0hCIdVv2S6wRe9e2xTwd4ytQ948dLG1CNgehds95BQATO57Umj2nVivb/goXuqF9Abc8MSzYv11/vApfYdaIhxd33FOZYJJD9CN62/qOS4LihayvoQqTleRWWxIvrwGFKE1YRO3VPyXG5lzVWPP2juffROaz3rVu0CB2qkiHeV3VeljYh2itZxHLI0EqQFQPcELfaXYEXLkxCIAJaJCYwxbD/G04IceHo3f1fFDa8pFC057PRyGbsK/iswR7GCXzm8FgOKhfRGRBdpyo3nkIi99S19PBKOemHLNFg==
+ZmX7IbIO8vGury2rpWqv0N++BA2ClcXqj3OcqgadgisDTrqGFQyvVbrlSRwJxDIfmsRLZlYQ9aJbaus7Jf5epCzjilADVsfEKywHEWoFmygYNE+jbw50jf4oheae4XafjOpNhO7s2zBFBDC3IM4789rNX1jk0bZ6A0A4jddnnvu0ceEvBj3RbcFBm7lVPBvKR/VOtMflpRMOLbzZbEI0J/D2nnEdwDeuhvQSRT01SdjD7Rnfe1menL5BwyO8O/k4DzZDDaflg4v3u1leZDf5OAedy6yMtdRFC9+6N6/hzk4+XzGaQ2uMyxcZrTzIImai20GHhZtTe8dSd1ZlM6uk3w==

@@ -21,7 +21,7 @@ desc description
 foo file
 """
 
-INPUT_FILE = os.path.join('test_files', 'file_a.py')
+INPUT_FILE = os.path.join('tests', 'test_files', 'file_a.py')
 OUTPUT_FILE = os.path.join('tmp', 'file_a_output.py')
 ROUNDTRIPPED = os.path.join('tmp', 'file_a_roundtripped.py')
 
