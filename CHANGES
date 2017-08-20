@@ -1,5 +1,8 @@
 py/clp/CHANGES
 
+v0.1.8
+    2017-08-19
+        * add tox.ini, *requirements.txt; edit cfg files            SLOC  732
 v0.1.7
     2017-07-13
         * rewrite setup.py, add MANIFESt.in, minor edits config
@@ -41,7 +44,5 @@ v0.0.1
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> c27c44364ecfa88d320f894b3732b4a6ead00837
+
