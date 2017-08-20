@@ -2,8 +2,8 @@
 project:clp
 package:clp
 mainlang:py
-version:0.1.6
-versionDate:2017-06-08
+version:0.1.7
+versionDate:2017-07-13
 :?dirs?:
 dir:std:ghpDoc
 dir:std:dist
@@ -12,7 +12,6 @@ dir:std:tests
 dir:std:.dvcz
 dir:pkg:clp
 dir:local:test_files
-dir:local:.cache
 dir:clr:build
 :?files?:
 code:std:.dvcz/projCfg
@@ -29,6 +28,9 @@ code:std:pylintrc
 code:std:.coveragerc
 code:std:check.summary
 code:std:MANIFEST.in
+code:std:tox.ini
+code:std:requirements.txt
+code:std:test_requirements.txt
 txt:std:LICENSE-MIT.md
 txt:std:CHANGES
 txt:std:README.md
@@ -42,4 +44,5 @@ bash:std:styleit
 bash:std:test.all
 bash:std:doPyLint
 bash:std:checkCoverage
+py:std:setup.cfg
 py:std:setup.py
