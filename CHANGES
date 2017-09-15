@@ -1,5 +1,8 @@
 py/clp/CHANGES
 
+v0.1.9
+    2017-09-15
+        * pep8 etc; correct tox.ini, requirements.txt               SLOC  742
 v0.1.8
     2017-08-19
         * add tox.ini, *requirements.txt; edit cfg files            SLOC  732
@@ -34,6 +37,7 @@ v0.0.2
 v0.0.1  
     2016-10-12
         * initial commit 
+
 
 
 
