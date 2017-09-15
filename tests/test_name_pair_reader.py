@@ -4,7 +4,7 @@
 
 import io
 
-import os
+# import os
 import unittest
 
 from clp.py import get_name_pairs, CLPError
@@ -52,22 +52,24 @@ class TestNamePairReader(unittest.TestCase):
         """ Verify that an empty input stream raises an exception. """
         in_stream = io.StringIO('')
         try:
-            _ = get_name_pairs(in_stream)
+            get_name_pairs(in_stream)
             self.fail("didn't raise on empty input")
         except CLPError as err:
             pass
 
     def test_ill_formed_input(self):
-        """ Verify that an input line without a delimiter raises an exception. """
+        """
+        Verify that an input line without a delimiter raises an exception.
+        """
         in_stream = io.StringIO(NO_DELIMITER_INPUT)
         with self.assertRaises(CLPError):
-            pairs = get_name_pairs(in_stream)
+            get_name_pairs(in_stream)
 
     def test_dupe_left_input(self):
         """ Verify that input with duplicate keys raises. """
         in_stream = io.StringIO(DUPE_LEFT_VALUE_INPUT)
         with self.assertRaises(CLPError):
-            pairs = get_name_pairs(in_stream)
+            get_name_pairs(in_stream)
 
     def test_name_pair_reader(self):
         """ Verify that good input produces the expected list of pairs. """

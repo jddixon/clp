@@ -14,6 +14,7 @@ from xlattice import check_hashtype, HashTypes
 
 if sys.version_info < (3, 6):
     import sha3         # monkey-patches hashlib
+    assert sha3         # suppress warning
 
 PY_NAME_PAT = r'^[a-zA-Z_][a-zA-Z_0-9]*$'
 PY_NAME_RE = re.compile(PY_NAME_PAT)
@@ -70,7 +71,7 @@ def get_name_pairs(in_stream):
         if line:
             line = line.strip()
             if line:
-                if not ' ' in line:
+                if ' ' not in line:
                     raise CLPError("ill-formed line: '%s'" % line)
                 left, right = line.split(' ', maxsplit=1)
                 left = left.rstrip()
