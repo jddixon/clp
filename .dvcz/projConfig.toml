@@ -7,8 +7,8 @@
     name = 'clp'             # external name = distribution name
     package = 'clp'             # internal name
     main_lang = 'py'
-    version = '0.1.10'
-    version_date = '2017-09-26'
+    version = '0.1.11'
+    version_date = '2017-09-27'
     author = 'Jim Dixon'
     author_email = 'jdd@gmail.com'
     description='utilities for computer language processing'

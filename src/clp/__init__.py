@@ -1,7 +1,7 @@
 # clp/cp/__init__.py
 
-__version__ = '0.1.10'
-__version_date__ = '2017-09-26'
+__version__ = '0.1.11'
+__version_date__ = '2017-09-27'
 
 __all__ = ['CLPError',
            'serialize_str_list']
@@ -25,15 +25,16 @@ def serialize_str_list(name, indent, elements, line_len=78):
     out = ' ' * indent + name + '=['
     out_len = len(out)
 
-    for element in elements:
-        elm_len = len(element) + 4  # leading, trailing SQUOTE, comma, space
-        if out_len + elm_len > line_len:
-            output.append(out[0:-1])
-            out = (' ' * (indent + name_len + 2)) + "'" + element + "', "
-            out_len = len(out)
-        else:
-            out += "'" + element + "', "
-            out_len += elm_len
+    if elements:
+        for element in elements:
+            elm_len = len(element) + 4  # tswo SQUOTEs, comma, space
+            if out_len + elm_len > line_len:
+                output.append(out[0:-1])
+                out = (' ' * (indent + name_len + 2)) + "'" + element + "', "
+                out_len = len(out)
+            else:
+                out += "'" + element + "', "
+                out_len += elm_len
 
     if out.endswith(', '):
         out = out[0:-2]
