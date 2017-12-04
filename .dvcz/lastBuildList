@@ -7,25 +7,18 @@ Giaje1YAJPNVBt3dlOA5lhBp4GpSYBskJ9UR2Zyt3lgAGK3dEwxYETLMh9VWEV8i
 k2lyCIE/V/CDb9eVDYQgYSJYrnQ/JAPST7NbcY8aI+/0l7QVBhLBpmOCvmS6ofvz
 /QIDAQAB
 -----END PUBLIC KEY-----
-clp v0.1.11
-2017-09-27 21:50:51
+clp
+2017-12-04 01:02:36
 # BEGIN CONTENT #
 clp
- .cache
-  v
-   cache
-    lastfailed bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f
  .dvcz
-  builds f086e02433f64f66230cdedba1ecd5ec46d05849
-  copyright 9ba73bf798bce641eb5082b855c6788fe7ea5833
-  lastBuildList 9b12b3fe55020b9c495787446f7362bd2927a330
-  license 5977a55c75bb4612004451a56b0b4c22d9d3311d
+  builds 82057919c025bf81b04d962dfa93bd766b7004b7
+  lastBuildList 8a63f1de1ea8d31097cd47278baad73d27bdd2f0
   projCfg afc42dd1cdf43a282484b8a0991b5b81353358fe
   projCfg.local 741c00ac0647ec79ce72365d5037a87d74359faf
-  projConfig.toml 08ea6d5dc3954ee49c0b730fdde8237daacaa503
-  version 82a4879c69207518a9a7b11b55c8f69cba16a4b4
+  projConfig.toml 680e75140880924e7af069fa4766c07fe92f0e3a
  .gitignore c8129c7133b7a7755cefd3dfc62a9af7bc306aa0
- CHANGES 4fc8627bfe3308199be653973f65acb37466e9ee
+ CHANGES 4d632a1e94f4e573e244f3b90bef3ee13f6abae2
  LICENSE-MIT.md 1aadfd51d28fc4b9e3f5929212794dd121b13e26
  MANIFEST.in 7ecdc5eedf233385e0f99ba4c6e4a42212adb46f
  README.md acc826407074062eb9e4d0022affa644063bf88c
@@ -41,22 +34,22 @@ clp
  name_pair_test_data.txt 39aceffd3c4a2c8f378097cf61b48dc2bf7e13c8
  pylintrc dd234fda24a547a9071f1e4608a3c1f3b7de9aa0
  requirements.txt 2ac33460f256715f02a3d17918582397e0a0a1bd
- setup.py 5c8698666235fafaacb615e5b1e1a7887917bb8f
+ setup.py d4a3ded283a5c99979a8fc33fb338175a54cec3c
  src
   clp
-   __init__.py 6e8b07bb4d435485ec7024e7e11d1ea0d1cf99a8
-   py.py c0b4dc0706318c274debaa7fed553f9de99e0f5d
+   __init__.py 395f488b4da8ab984292620cde05a5d6f879032f
+   py.py 9d12bafc75fef739ec4e1374ed2dcc18b225048d
  styleit 9dbe1953dc53e3831f18b26994adbd95df99bb63
  test.all 7ef9453dba342c2f64f56e789c0a9cb407845f95
  test_requirements.txt 9f289cc65013a10e5223da569e5f7806bd853a61
  tests
-  test_file_a.py f71f80594b548365895c49deef421580dc38e01e
+  test_file_a.py c2618c3a4883290ed62b6f74f6844cd333abdc1f
   test_files
-   file_a.py 8ac415134beae54066286dd20c45a5e95f40c050
-  test_list_serializer.py 20379336fac362ce128d87211e27f1056399d274
-  test_name_pair_reader.py 4cd4b3678d23f9ab3b26b3b804ed5dff291836c8
-  test_util.py f26d9a67d6d522db1bcfe9da98bbc9ec2ca5e821
+   file_a.py dd84f11134a151e3be7804f8071287d267c05f33
+  test_list_serializer.py 60eccd8d16e564458eb80373b95bb64e1f974103
+  test_name_pair_reader.py a8813d0bbe8af4f7436358a56657ab78911c6a20
+  test_util.py a98f0873c5830f26efbc0c40dccfaf0783680aa4
  tox.ini a3d3011efe37ef6269e3f386273020e63e74002d
 # END CONTENT #
 
-Ddhs2J3UATJB67MiC/QtBnxvTG8oR7BXe6G56ue7OF2kljTTpI85Tf32iqhZdSr7GkGzpZwwNDVSzTRuwz6FN5dktPSfDaTWFhNfzLlKGdu29Afo5wyUMDE46vqkTCJLW2ageepU4M8nc2iD/HnZ50tQq7/I/SxCL5Upv2u+KFx9WXHOkI3sh4slvZXUR6bYzwcz2SSCo0WaIBfYIK3wA36p1W2ayUNZ+G+sw4aCorZRkGfcB+3+/luHF5WFGmEyEkUxJYxU2bn/saKUjDLAJXzkHgEQoPlL5Nd5jXK3BV53hcuRL1ljBE5lOVmYpoPzE7f2962dSoJ5zbSSdEdBlQ==
+SD1G3rEX87Y9JblRgwCB8Xd8SEb/+U9jHNmtj9bGeA/8O4TPJDZCCIVsEIFctoyyMFWBwN+fZoTlL+xej6ml98P/STbZnuJ73+jiO/9YqhbU4bqzaDd0uvv+SHM6cQajkCI46k0i7jSGS5ijGvfXMfiNtrp0XCugJi4IJBfRYOMtR8tYtiYYCmrG1ODkHiiQoUDJNvnYyjuiBf2UJZD5S0TgtzPMINN+MSa8wJD57t7l2tXN4kMNi71+WX0DChMhTaS8gy0XbIRGl1586pMRo/FisJ7pRZcok5F0AjBY5jYRiRo6KHtyH4CbopPY1MjBRPZjB5uWLkquA5HsvSX8uQ==

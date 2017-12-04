@@ -2,6 +2,8 @@
 
 # clp/test_name_pair_reader.py
 
+""" Test the name-pair reader. """
+
 import io
 
 # import os
@@ -54,7 +56,7 @@ class TestNamePairReader(unittest.TestCase):
         try:
             get_name_pairs(in_stream)
             self.fail("didn't raise on empty input")
-        except CLPError as err:
+        except CLPError:
             pass
 
     def test_ill_formed_input(self):

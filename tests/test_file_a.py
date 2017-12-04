@@ -2,6 +2,8 @@
 
 # clp/test_infile_a.py
 
+""" Test changing name pairs in test file A. """
+
 import io
 import os
 import unittest

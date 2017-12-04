@@ -1,37 +1,29 @@
-# projConfig.toml for clp
-
 [meta]
-    version= '0.1.0'
+version = "0.1.0"
 
 [project]
-    name = 'clp'             # external name = distribution name
-    package = 'clp'             # internal name
-    main_lang = 'py'
-    version = '0.1.11'
-    version_date = '2017-09-27'
-    author = 'Jim Dixon'
-    author_email = 'jdd@gmail.com'
-    description='utilities for computer language processing'
-    copyright = '2016-2017'
-    dev_status = 'pre-alpha'
-    license = 'mit'
-    relpath = 'py/clp'
-    state = 'shared'
-    url = 'https://jddixon.github.io/clp'
+name = "clp"
+package = "clp"
+main_lang = "py"
+version = "0.1.12"
+version_date = "2017-12-03"
+author = "Jim Dixon"
+author_email = "jdd@gmail.com"
+description = "utilities for computer language processing"
+copyright = "2016-2017"
+dev_status = "pre-alpha"
+license = "mit"
+relpath = "py/clp"
+state = "shared"
+url = "https://jddixon.github.io/clp"
 
 [py]
-    packages = ['clp']
-    package_dir = ['src']
-    test_dir = 'tests'
-    py_modules = []
-    scripts=[]
-    ext_modules = []
-
-    # sdReq output
-    distshare = ['rnglib','xlattice_py']
-    requirements=['pysha3','setuptools']
-    test_requirements=[]
-
-    # trove stuff is TBD
-
-
+packages = [ "clp",]
+package_dir = [ "src",]
+test_dir = "tests"
+py_modules = []
+scripts = []
+ext_modules = []
+distshare = [ "rnglib", "xlattice_py",]
+requirements = [ "pysha3", "setuptools",]
+test_requirements = []
