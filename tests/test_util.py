@@ -2,13 +2,14 @@
 
 # clp/test_util.py
 
+""" Test CLP Utilities. """
+
 import unittest
 from clp.py import check_string, check_name, CLPError
 
 
 class TestUtils(unittest.TestCase):
-    """
-    """
+    """ Test CLP Utilities. """
 
     def setUp(self):
         pass
@@ -17,6 +18,7 @@ class TestUtils(unittest.TestCase):
         pass
 
     def test_check_name(self):
+        """ Test the check_name() function. """
         with self.assertRaises(CLPError):
             check_name(None)
         with self.assertRaises(CLPError):
@@ -32,6 +34,7 @@ class TestUtils(unittest.TestCase):
         check_name('_')             # or just single underscore
 
     def test_check_string(self):
+        """ Test the check_string() function. """
 
         name_pairs = {
             'foo': 'bar'

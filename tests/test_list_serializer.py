@@ -2,13 +2,14 @@
 
 # clp/test_list_serializer.py
 
+""" Test list srialization. """
+
 import unittest
 from clp import serialize_str_list
 
 
 class TestUtils(unittest.TestCase):
-    """
-    """
+    """ Test list srialization. """
 
     def setUp(self):
         pass

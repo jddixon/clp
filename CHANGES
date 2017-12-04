@@ -1,5 +1,8 @@
 py/clp/CHANGES
 
+v0.1.12
+    2017-12-03
+        * pep8, general cleanup                                     SLOC  860
 v0.1.11
     2017-09-27
         * modify serialize_str_list() to handle empty list          SLOC  858
@@ -43,6 +46,7 @@ v0.0.2
 v0.0.1  
     2016-10-12
         * initial commit 
+
 
 
 

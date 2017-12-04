@@ -1,13 +1,15 @@
 # clp/cp/__init__.py
+""" Tools for computer language processing. """
 
-__version__ = '0.1.11'
-__version_date__ = '2017-09-27'
+__version__ = '0.1.12'
+__version_date__ = '2017-12-03'
 
 __all__ = ['CLPError',
            'serialize_str_list']
 
 
 class CLPError(RuntimeError):
+    """ Errors encountered in processing computer language. """
     pass
 
 

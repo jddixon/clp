@@ -59,7 +59,7 @@ def get_name_pairs(in_stream):
     ignored.  Comments beginning with a sharp sign are ignored
     """
 
-    # XXX test for null in_stream
+    assert in_stream is not None
 
     pairs = {}
     line = in_stream.readline()
@@ -118,7 +118,6 @@ def rename_in_file(path_to_file, name_pairs, hashtype, path_to_output=''):
         """ Hash a block of data using the specified type of SHA. """
 
         sha = None
-        # pylint: disable=redefined-variable-type
         if hashtype == HashTypes.SHA1:
             sha = hashlib.sha1()
         elif hashtype == HashTypes.SHA2:
@@ -133,18 +132,18 @@ def rename_in_file(path_to_file, name_pairs, hashtype, path_to_output=''):
     else:
         check_hashtype(hashtype)      # may raise exception
 
-    # XXX CHECK: name_pairs must be a str->str map
+    # CHECK: name_pairs must be a str->str map
 
-    # XXX this assumes the file is utf-8
-    # XXX Should be try/except
+    # ASSUMES the file is utf-8
+    # SHOULD BE try/except
     with open(path_to_file, 'rb') as file:
         data = file.read()
 
     old_hash = hash_it(data, hashtype)
 
     # DEBUG
-    print("pathToFile: %s" % path_to_file)
-    print("old_hash:   %s" % old_hash)
+    # print("pathToFile: %s" % path_to_file)
+    # print("old_hash:   %s" % old_hash)
     # END
 
     results = []
@@ -177,11 +176,11 @@ def rename_in_file(path_to_file, name_pairs, hashtype, path_to_output=''):
         file.write(data_out)
 
     # DEBUG
-    print("path_to_output %s" % path_to_output)
-    print("new_hash:   %s" % new_hash)
-    print("counts:")
-    for key in counts:
-        print("  %-5s %d" % (key, counts[key]))
+    # print("path_to_output %s" % path_to_output)
+    # print("new_hash:   %s" % new_hash)
+    # print("counts:")
+    # for key in counts:
+    #     print("  %-5s %d" % (key, counts[key]))
     # END
 
     return (data_out, counts, old_hash, new_hash)
