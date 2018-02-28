@@ -8,17 +8,17 @@ k2lyCIE/V/CDb9eVDYQgYSJYrnQ/JAPST7NbcY8aI+/0l7QVBhLBpmOCvmS6ofvz
 /QIDAQAB
 -----END PUBLIC KEY-----
 clp
-2017-12-04 01:02:36
+2018-02-28 19:00:29
 # BEGIN CONTENT #
 clp
  .dvcz
-  builds 82057919c025bf81b04d962dfa93bd766b7004b7
-  lastBuildList 8a63f1de1ea8d31097cd47278baad73d27bdd2f0
+  builds 375e1c84a303cadb5fbc85dfc6f3cdd53ce1c924
+  lastBuildList 3b0c4a17d4477c64f386ea7663856b3d95d5b4c4
   projCfg afc42dd1cdf43a282484b8a0991b5b81353358fe
   projCfg.local 741c00ac0647ec79ce72365d5037a87d74359faf
-  projConfig.toml 680e75140880924e7af069fa4766c07fe92f0e3a
+  projConfig.toml a49be8309d91955e9aacd421dfe80258dbabcf64
  .gitignore c8129c7133b7a7755cefd3dfc62a9af7bc306aa0
- CHANGES 4d632a1e94f4e573e244f3b90bef3ee13f6abae2
+ CHANGES 9aee768b4ef646dd453e2bb1d54de496992104e0
  LICENSE-MIT.md 1aadfd51d28fc4b9e3f5929212794dd121b13e26
  MANIFEST.in 7ecdc5eedf233385e0f99ba4c6e4a42212adb46f
  README.md acc826407074062eb9e4d0022affa644063bf88c
@@ -33,15 +33,15 @@ clp
  installit 37194bce3ea6d6ebc3e8162b6d20501234973e78
  name_pair_test_data.txt 39aceffd3c4a2c8f378097cf61b48dc2bf7e13c8
  pylintrc dd234fda24a547a9071f1e4608a3c1f3b7de9aa0
- requirements.txt 2ac33460f256715f02a3d17918582397e0a0a1bd
- setup.py d4a3ded283a5c99979a8fc33fb338175a54cec3c
+ requirements.txt 136541c19cb4604d6fd1bab71a32098162c96650
+ setup.py ee58a6707bd4bdf8c135af574c8275878e04ff8e
  src
   clp
-   __init__.py 395f488b4da8ab984292620cde05a5d6f879032f
-   py.py 9d12bafc75fef739ec4e1374ed2dcc18b225048d
+   __init__.py a98db6e9fa200ec1724ac486306a16b2fc2433f9
+   py.py 24c6f3e364cf7898bd2f70c5441913fb3ca768fb
  styleit 9dbe1953dc53e3831f18b26994adbd95df99bb63
  test.all 7ef9453dba342c2f64f56e789c0a9cb407845f95
- test_requirements.txt 9f289cc65013a10e5223da569e5f7806bd853a61
+ test_requirements.txt 34cc40b08cd7f53fa0d5332a72f1bed85725a468
  tests
   test_file_a.py c2618c3a4883290ed62b6f74f6844cd333abdc1f
   test_files
@@ -49,7 +49,7 @@ clp
   test_list_serializer.py 60eccd8d16e564458eb80373b95bb64e1f974103
   test_name_pair_reader.py a8813d0bbe8af4f7436358a56657ab78911c6a20
   test_util.py a98f0873c5830f26efbc0c40dccfaf0783680aa4
- tox.ini a3d3011efe37ef6269e3f386273020e63e74002d
+ tox.ini 21120c09d68b05571de26987ca9a604ee2c56788
 # END CONTENT #
 
-SD1G3rEX87Y9JblRgwCB8Xd8SEb/+U9jHNmtj9bGeA/8O4TPJDZCCIVsEIFctoyyMFWBwN+fZoTlL+xej6ml98P/STbZnuJ73+jiO/9YqhbU4bqzaDd0uvv+SHM6cQajkCI46k0i7jSGS5ijGvfXMfiNtrp0XCugJi4IJBfRYOMtR8tYtiYYCmrG1ODkHiiQoUDJNvnYyjuiBf2UJZD5S0TgtzPMINN+MSa8wJD57t7l2tXN4kMNi71+WX0DChMhTaS8gy0XbIRGl1586pMRo/FisJ7pRZcok5F0AjBY5jYRiRo6KHtyH4CbopPY1MjBRPZjB5uWLkquA5HsvSX8uQ==
+My9VH7iD20dpi62s2F+jP+5Xgn979XUe0IgAgZLbKZcScQF9iPe8oZgjEIMt/JgjZ9lQHJrwFx8PDKBoWKXkHXlYzMBsCfQPLdcsBaiTIaccE1PemeXM+p/LiWnyfou5RjCfLJUgYfbQAJJ4XQ5bSrnPfKiXu+RwXpnTXAdzHs5OmvlOhfDAf+d0VD3QuEfwoxlbPCpJgyhUonL+3QV+zW47Fpda4DKL0OBRbhYqo1eoSOFtnzKaVYGrM9T4fZ158+oyx77Zadj2pScNlcCA+UztS9kxMvDZamSw8iF1eWaUbaJWkpKbQRikWE9X6ZCjqwAAJ550S8cEMr81FdckJg==

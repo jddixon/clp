@@ -35,7 +35,7 @@ def check_string(tokval, name_pairs):
     Where a string is a quoted variable name and the variable name
     is in the old-name/new-name map, do the replacement.
 
-    The quote character must either SQUOTE or DQUOTE.  If the comparison
+    The quote character must be either SQUOTE or DQUOTE.  If the comparison
     fails, return the value that was tested.
     """
     if len(tokval) > 2:
