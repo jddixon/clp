@@ -1,8 +1,8 @@
 # clp/cp/__init__.py
 """ Tools for computer language processing. """
 
-__version__ = '0.1.13'
-__version_date__ = '2018-02-28'
+__version__ = '0.1.14'
+__version_date__ = '2018-03-21'
 
 __all__ = ['CLPError',
            'serialize_str_list']

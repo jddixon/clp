@@ -7,18 +7,18 @@ Giaje1YAJPNVBt3dlOA5lhBp4GpSYBskJ9UR2Zyt3lgAGK3dEwxYETLMh9VWEV8i
 k2lyCIE/V/CDb9eVDYQgYSJYrnQ/JAPST7NbcY8aI+/0l7QVBhLBpmOCvmS6ofvz
 /QIDAQAB
 -----END PUBLIC KEY-----
-clp
-2018-02-28 19:00:29
+clp v0.1.14
+2018-03-21 21:41:43
 # BEGIN CONTENT #
 clp
  .dvcz
-  builds 375e1c84a303cadb5fbc85dfc6f3cdd53ce1c924
-  lastBuildList 3b0c4a17d4477c64f386ea7663856b3d95d5b4c4
+  builds 9be8ba5362bbd1ce1dc8ced239c3e2d828bf8c59
+  lastBuildList 2a9bc792f47418de66a61926499309a00e97ef17
   projCfg afc42dd1cdf43a282484b8a0991b5b81353358fe
   projCfg.local 741c00ac0647ec79ce72365d5037a87d74359faf
-  projConfig.toml a49be8309d91955e9aacd421dfe80258dbabcf64
+  projConfig.toml 58ca402fabfbd11e5af6e86c93c26515d59ea394
  .gitignore c8129c7133b7a7755cefd3dfc62a9af7bc306aa0
- CHANGES 9aee768b4ef646dd453e2bb1d54de496992104e0
+ CHANGES f45aea7155d60eb235ed45fe510aee89ba94fec7
  LICENSE-MIT.md 1aadfd51d28fc4b9e3f5929212794dd121b13e26
  MANIFEST.in 7ecdc5eedf233385e0f99ba4c6e4a42212adb46f
  README.md acc826407074062eb9e4d0022affa644063bf88c
@@ -34,10 +34,10 @@ clp
  name_pair_test_data.txt 39aceffd3c4a2c8f378097cf61b48dc2bf7e13c8
  pylintrc dd234fda24a547a9071f1e4608a3c1f3b7de9aa0
  requirements.txt 136541c19cb4604d6fd1bab71a32098162c96650
- setup.py ee58a6707bd4bdf8c135af574c8275878e04ff8e
+ setup.py 85382642074ae5434ff97f34091bcc2cd5fa6ecd
  src
   clp
-   __init__.py a98db6e9fa200ec1724ac486306a16b2fc2433f9
+   __init__.py 225d57f61ad7365cb3ceeeab867d4d288cf40ebf
    py.py 24c6f3e364cf7898bd2f70c5441913fb3ca768fb
  styleit 9dbe1953dc53e3831f18b26994adbd95df99bb63
  test.all 7ef9453dba342c2f64f56e789c0a9cb407845f95
@@ -52,4 +52,4 @@ clp
  tox.ini 21120c09d68b05571de26987ca9a604ee2c56788
 # END CONTENT #
 
-My9VH7iD20dpi62s2F+jP+5Xgn979XUe0IgAgZLbKZcScQF9iPe8oZgjEIMt/JgjZ9lQHJrwFx8PDKBoWKXkHXlYzMBsCfQPLdcsBaiTIaccE1PemeXM+p/LiWnyfou5RjCfLJUgYfbQAJJ4XQ5bSrnPfKiXu+RwXpnTXAdzHs5OmvlOhfDAf+d0VD3QuEfwoxlbPCpJgyhUonL+3QV+zW47Fpda4DKL0OBRbhYqo1eoSOFtnzKaVYGrM9T4fZ158+oyx77Zadj2pScNlcCA+UztS9kxMvDZamSw8iF1eWaUbaJWkpKbQRikWE9X6ZCjqwAAJ550S8cEMr81FdckJg==
+g4dtJrHea7VThCyQdJB4+gtAE5mY1jKyX9fKMMrJSV07SrQA+qiaLD66bXYRKhRlbkIjhkCbghLUS6oEUrwzAMxcCaF3eiKgipY4hp4VkMRN0c/5gEUcRfJEmo+rjZH8ffip5T/k8uTNeS3r+1+XVbMs/usmmtfX7QHAo8iKgqpXM2XSqFViLlgcNPbWAmN4+N+KoD0YKrlp9BnZbM9oFg70+HB8uMHM0qeaFkeHntW6B4E2eZHiHSHDrsZgZAeQFY5kGswIM+piLcEakzMe9YGTk9fPnUcgrQijzK3uSKt953JEnpjcw8xiAPW+MbD+oUz1Uvg+wVO0CCykk7b4iw==
